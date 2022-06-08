@@ -1,0 +1,6 @@
+.divnav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+    font-size: 22px;
+}
