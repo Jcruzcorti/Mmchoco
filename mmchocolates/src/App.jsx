@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
 
         <img src={LogoImg} className="App-logo" alt="logo" />      
-        <ItemListContainer  fontFamily="sans-serif" fontSize="70px" />
+        <ItemListContainer  greeting="MM Chocolates" fontFamily="sans-serif" fontSize="70px" color="#000000" paddingLeft="50px" />
         <NavBar/>
         
       </header>

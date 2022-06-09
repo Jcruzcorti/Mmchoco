@@ -3,11 +3,13 @@ import './itemlistcontainer.css'
 
 function ItemListContainer(props) {
 
-    const Greeting ={
+    const Saludo ={
 
-        backgroundColor: props.backgroundColor,
         fontFamily: props.fontFamily,
-        fontSize: props.fontSize
+        fontSize: props.fontSize,
+        textAlign: props.textAlign,
+        color: props.color,
+        paddingLeft: props.paddingLeft        
 
     }
 
@@ -16,7 +18,7 @@ function ItemListContainer(props) {
 
     <div className="divgreeting">
         
-       <h1 className="h1greeting" style={Greeting}> MM Chocolates</h1>
+       <h1 style={Saludo}> {props.greeting} </h1>
         
     </div>
   )
