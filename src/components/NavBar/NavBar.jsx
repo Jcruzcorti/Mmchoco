@@ -8,7 +8,7 @@ function NavBar() {
 
   return (
 
-    <div className="divnav">
+    <div className="Divnav">
 
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">

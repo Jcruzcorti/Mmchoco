@@ -1,0 +1,29 @@
+
+.Divboton{
+   background-color: #f3dbed;
+   border-radius: 10px;
+   width: 150px;
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+.Botoncarrito{
+    background-color: #f3dbed;
+    color: #000000;
+    /* margin-top: 50px; */
+    border-radius: 5px;
+}
+
+
+.Botonagregar{
+    background-color: #f3dbed;
+    color: #000000;
+    /* margin-top: 20px; */
+    border-radius: 5px;
+}
+
+
+.cuenta{
+    font-weight: bolder;
+}

@@ -1,6 +1,7 @@
 .divgreeting{
     text-align: center;
     padding-left: 170px;
+    margin-top: 60px;
 }
 
 
@@ -8,4 +9,5 @@
     color: #000000;
     text-align: center;
     padding-left: 50px;
+   
 }
