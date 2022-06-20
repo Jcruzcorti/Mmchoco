@@ -1,8 +1,10 @@
 import './App.css';
 import LogoImg  from './imgs/mmlogo.png';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
       <section>
         <article>
             <div>
-            <ItemListContainer  greeting="MM Chocolates" fontFamily="sans-serif" fontSize="70px" color="#000000"  />
+            {/* <ItemListContainer  greeting="MM Chocolates" fontFamily="sans-serif" fontSize="70px" color="#000000"  /> */}
+           
+            <ItemDetailContainer greeting="Detalle del Producto"/>
             <ItemCount stock={5} initial={1}/>
             </div>
         </article>

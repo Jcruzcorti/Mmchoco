@@ -7,7 +7,7 @@ export const productos = [
         stock: 5,
         img:'./img/chica1.jpg',
         category: 'bombones',
-        description: 'Caja de 1/4kg: Aproximadamente entre 25-30 bombones',
+        description: 'Caja de 1/4kg: Aproximadamente entre 25-30 bombones de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     },
 
@@ -18,7 +18,7 @@ export const productos = [
         stock: 5,
         img: './img/mediana.jpg',
         category: 'bombones',
-        description: 'Caja de 1/2kg: Aproximadamente entre 25-30 bombones',
+        description: 'Caja de 1/2kg: Aproximadamente entre 25-30 bombones de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     },
 
@@ -29,7 +29,7 @@ export const productos = [
         stock: 5,
         img: './img/grandee.jpg',
         category: 'bombones',
-        description: 'Caja de 1kg: Aproximadamente entre 25-30 bombones',
+        description: 'Caja de 1kg: Aproximadamente entre 25-30 bombones de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     },
 
@@ -40,7 +40,7 @@ export const productos = [
         stock: 5,
         img: './img/ambas.jpg',
         category: 'bombones y barritas',
-        description: 'Caja de 1/4kg: Variado de bombones y barritas',
+        description: 'Caja de 1/4kg: Variado de bombones y barritas de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     },
 
@@ -52,7 +52,7 @@ export const productos = [
         stock: 5,
         img: './img/ambas.jpg',
         category: 'bombones y barritas',
-        description: 'Caja de 1/2kg: Variado de bombones y barritas',
+        description: 'Caja de 1/2kg: Variado de bombones y barritas de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     },
 
@@ -64,7 +64,7 @@ export const productos = [
         stock: 5,
         img: './img/ambas.jpg',
         category: 'bombones y barritas',
-        description: 'Caja de 1kg: Variado de bombones y barritas',
+        description: 'Caja de 1kg: Variado de bombones y barritas de chocolate semi-amargo, dulce, y blanco, rellenos de una gran variedad de sabores como pueden ser: Dulce de leche, bon o bon, pasta de maní, almendras con ddl, nueces con ddl, chocolate, pasta de avellanas, maní, marroc, coco, menta y pasas de uva con ddl',
 
     }
 

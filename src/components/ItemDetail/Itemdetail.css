@@ -1,0 +1,40 @@
+.divgreeting{
+    text-align: center;  
+}
+
+
+.h2greeting{    
+    color: #000000;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.imgitem{
+    width: 270px;
+    height: 310px;
+}
+
+.divInfo{
+    padding: 10px;
+    color: #000000;
+    border: 3px solid #000000 ;
+    text-align: center;
+    background-color: #f3dbed;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* .pItemDescripcion{
+    
+} */
+
+.pItemPrecio{
+    font-weight: bolder;
+    font-size: 20px;
+}

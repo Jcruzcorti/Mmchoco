@@ -1,27 +1,27 @@
 import React, {useState,useEffect} from 'react'
-import './itemlistcontainer.css'
 // import ItemCount from '../ItemCount/ItemCount'
 import { productos } from '../../mock/products'
-import ItemList from '../ItemList/ItemList'
+import ItemDetail from '../ItemDetail/ItemDetail';
+// import ItemList from '../ItemList/ItemList'
 
 
-function ItemListContainer(props) {
+function ItemDetailContainer (props) {
 
-  const [products, setProducts] = useState([])
+  const [product, setProduct] = useState({})
 
 
 
   useEffect( ()=> {
 
-    const traerProductos =  new Promise((resolve, reject) => {
+    const traerProducto =  new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(productos)
+          resolve(productos[0])
         }, 2000);
     });
 
-      traerProductos
+      traerProducto
         .then( (respuesta)=> {
-          setProducts(respuesta);
+          setProduct(respuesta);
         })
      
         .catch((error) => {
@@ -45,8 +45,9 @@ function ItemListContainer(props) {
     <div className="divgreeting">
         
        <h1 style={Saludo}> {props.greeting} </h1>
-       
-       <ItemList items={products}/>
+       <ItemDetail item={product}/>
+ 
+       {/* <ItemList items={product}/> */}
        {/* <ItemCount stock={5} initial={1}/> */}
 
         
@@ -56,6 +57,4 @@ function ItemListContainer(props) {
 
 
 
-export default ItemListContainer;
-
-
+export default ItemDetailContainer;
