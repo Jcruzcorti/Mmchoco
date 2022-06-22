@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react'
 import './itemlistcontainer.css'
-// import ItemCount from '../ItemCount/ItemCount'
 import { productos } from '../../mock/products'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
@@ -27,7 +26,7 @@ function ItemListContainer(props) {
               })
               resolve(categoryFound)
             }
-        }, 2000);
+        }, 800);
     });
 
       traerProductos
@@ -59,7 +58,6 @@ function ItemListContainer(props) {
 
        <div className='divListContainer'>
           <ItemList items={products}/>
-          {/* <ItemCount stock={5} initial={1}/> */}
        </div>
         
     </div>
