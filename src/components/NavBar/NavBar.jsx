@@ -19,10 +19,10 @@ function NavBar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item"><NavLink to="/Inicio" className="nav-link active" aria-current="page" href="#">Inicio</NavLink> </li> 
-                    <li className="nav-item"><NavLink to="/Productos" className="nav-link active" href="#">Productos</NavLink></li>
-                    <li className="nav-item"><NavLink to="/Nosotros" className="nav-link active" href="#">Nosotros</NavLink></li>
-                    <li className="nav-item"><NavLink to="/Contacto" className="nav-link active" href="#">Contacto</NavLink></li>
+                    <li className="nav-item"><NavLink to="/" className="nav-link active" aria-current="page" href="#">Inicio</NavLink> </li> 
+                    {/* <li className="nav-item"><NavLink to="/Productos" className="nav-link active" href="#">Productos</NavLink></li> */}
+                    <li className="nav-item"><NavLink to="/category/Bombones" className="nav-link active" href="#">Bombones</NavLink></li>
+                    <li className="nav-item"><NavLink to="/category/Bombonesybarritas" className="nav-link active" href="#">Bombones/barritas</NavLink></li>
                     <CartWidget/>
                 </ul>
                 </div>

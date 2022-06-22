@@ -3,19 +3,30 @@ import './itemlistcontainer.css'
 // import ItemCount from '../ItemCount/ItemCount'
 import { productos } from '../../mock/products'
 import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
 
 
 function ItemListContainer(props) {
 
   const [products, setProducts] = useState([])
 
-
+  const {categoryId} = useParams();
+  console.log(categoryId);
 
   useEffect( ()=> {
 
     const traerProductos =  new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(productos)
+
+          if (categoryId === undefined)
+            resolve(productos)
+
+            else{
+              const categoryFound = productos.filter(producto =>{
+                return producto.category == categoryId;
+              })
+              resolve(categoryFound)
+            }
         }, 2000);
     });
 
@@ -27,7 +38,7 @@ function ItemListContainer(props) {
         .catch((error) => {
           console.log(error);
         });
-  }, []);
+  }, [categoryId]);
 
 
     const Saludo ={

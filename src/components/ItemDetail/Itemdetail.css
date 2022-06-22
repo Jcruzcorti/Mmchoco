@@ -30,9 +30,9 @@
     margin-bottom: 50px;
 }
 
-/* .pItemDescripcion{
-    
-} */
+.pItemDescripcion{
+    font-size: 18px;
+}
 
 .pItemPrecio{
     font-weight: bolder;

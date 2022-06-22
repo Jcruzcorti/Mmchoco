@@ -25,8 +25,8 @@ function App() {
                   <div> */}
 
                     <Route  path='/' element={<ItemListContainer  greeting="MM Chocolates" fontFamily="sans-serif" fontSize="70px" color="#000000"  />}/>
-
-                    <Route path='/Producto/:itemId' element={<ItemDetailContainer greeting="Detalle del Producto"/>}/>
+                    <Route  path='/category/:categoryId' element={<ItemListContainer  greeting="Categorías del Producto" fontFamily="sans-serif" fontSize="70px" color="#000000"  />}/>
+                    <Route  path='/Producto/:itemId' element={<ItemDetailContainer greeting="Detalle del Producto"/>}/>
    
                     {/* <ItemCount stock={5} initial={1}/> */}
                   {/* </div>

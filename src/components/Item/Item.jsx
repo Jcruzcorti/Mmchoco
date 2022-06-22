@@ -13,7 +13,6 @@ const Item = ({item}) => {
 
         <div className='divItem'>
             <h3>{item.name}</h3>
-            <h4 >{item.id}</h4>
             <img className='imgitem' src={item.img} alt="imagen" />
             <p className='pitem1'>{item.description}</p>
             <p className='pitem2'>${item.price}</p>
