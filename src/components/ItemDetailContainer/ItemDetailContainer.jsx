@@ -1,21 +1,30 @@
 import React, {useState,useEffect} from 'react'
-// import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import { productos } from '../../mock/products'
 import ItemDetail from '../ItemDetail/ItemDetail';
 // import ItemList from '../ItemList/ItemList'
+import {useParams} from 'react-router-dom'
 
 
 function ItemDetailContainer (props) {
 
   const [product, setProduct] = useState({})
 
+  const {itemId} = useParams();
+  console.log(itemId);
 
 
   useEffect( ()=> {
 
     const traerProducto =  new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(productos[0])
+    
+        const itemFound = productos.find(producto =>{
+           return producto.id === parseInt(itemId)
+        })
+        
+        resolve(itemFound)
+
         }, 2000);
     });
 
@@ -27,7 +36,7 @@ function ItemDetailContainer (props) {
         .catch((error) => {
           console.log(error);
         });
-  }, []);
+  }, [itemId]);
 
 
     const Saludo ={
@@ -46,6 +55,7 @@ function ItemDetailContainer (props) {
         
        <h1 style={Saludo}> {props.greeting} </h1>
        <ItemDetail item={product}/>
+       <ItemCount stock={5} initial={1}/>
  
        {/* <ItemList items={product}/> */}
        {/* <ItemCount stock={5} initial={1}/> */}

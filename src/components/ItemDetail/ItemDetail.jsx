@@ -1,7 +1,11 @@
 import React from 'react'
 import './Itemdetail.css'
 
+
+
 function ItemDetail({item}) {
+
+  
   return (
     <div className='divgreeting'>
 
@@ -12,6 +16,7 @@ function ItemDetail({item}) {
         <div className='divInfo'>
             <p className='pItemDescripcion'>{item.description}</p>
             <p className='pItemPrecio'>${item.price}</p>
+           
         </div>
 
     </div>

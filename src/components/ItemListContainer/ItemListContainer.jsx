@@ -42,13 +42,14 @@ function ItemListContainer(props) {
 
   return (
 
-    <div className="divgreeting">
+    <div className="divgreeting1">
         
        <h1 style={Saludo}> {props.greeting} </h1>
-       
-       <ItemList items={products}/>
-       {/* <ItemCount stock={5} initial={1}/> */}
 
+       <div className='divListContainer'>
+          <ItemList items={products}/>
+          {/* <ItemCount stock={5} initial={1}/> */}
+       </div>
         
     </div>
   )
