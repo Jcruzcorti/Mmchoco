@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+// import ItemCount from '../ItemCount/ItemCount'
 import { productos } from '../../mock/products'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom'
@@ -54,7 +54,7 @@ function ItemDetailContainer (props) {
         
        <h1 style={Saludo}> {props.greeting} </h1>
        <ItemDetail item={product}/>
-       <ItemCount stock={5} initial={1}/>
+       {/* <ItemCount stock={5} initial={1}/> */}
         
     </div>
   )

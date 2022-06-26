@@ -3,10 +3,9 @@ import './itemcount.css'
 
 
 
-function ItemCount({stock, initial}) {
+function ItemCount({stock, initial, onAdd}) {
 
     const [count, setCount] = useState(initial)    
-
 
 
     function Suma() {
@@ -39,7 +38,7 @@ function ItemCount({stock, initial}) {
         <span className="cuenta"> {count} </span>
         <button onClick={Suma}  className="Botoncarrito"> + </button>
 
-        <button className="Botonagregar">Agregar al carrito</button>
+        <button onClick={()=>onAdd(count)} className="Botonagregar">Agregar al carrito</button>
 
     </div>
   )
