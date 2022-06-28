@@ -1,6 +1,6 @@
 import './navbar.css';
 import React from 'react';
-import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from '../cartWidget/CartWidget';
 import {NavLink} from 'react-router-dom'
 
 
@@ -21,7 +21,7 @@ function NavBar() {
                 <ul className="navbar-nav">
                     <li className="nav-item"><NavLink to="/" className="nav-link active" aria-current="page" href="#">Inicio</NavLink> </li> 
                     <li className="nav-item"><NavLink to="/category/Bombones" className="nav-link active" href="#">Bombones</NavLink></li>
-                    <li className="nav-item"><NavLink to="/category/Bombonesybarritas" className="nav-link active" href="#">Bombones/barritas</NavLink></li>
+                    <li className="nav-item"><NavLink to="/category/Mixbarritas" className="nav-link active" href="#">Mix/barritas</NavLink></li>
                     <CartWidget/>
                 </ul>
                 </div>

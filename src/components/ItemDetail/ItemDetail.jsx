@@ -1,6 +1,6 @@
 import React from 'react'
 import './Itemdetail.css'
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../itemCount/ItemCount'
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 // import {useNavigate} from 'react-router-dom';

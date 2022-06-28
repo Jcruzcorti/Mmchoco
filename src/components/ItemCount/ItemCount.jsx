@@ -14,7 +14,7 @@ function ItemCount({stock, initial, onAdd}) {
             setCount(count +1)
         }
 
-        else if (count==stock){
+        else if (count===stock){
             setCount(stock)
             alert("Alcanzaste el límite de stock, muchas gracias");
         }

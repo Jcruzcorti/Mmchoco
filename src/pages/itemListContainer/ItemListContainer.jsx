@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import './itemlistcontainer.css'
 import { productos } from '../../mock/products'
-import ItemList from '../ItemList/ItemList'
+import ItemList from '../../components/itemList/ItemList'
 import { useParams } from 'react-router-dom'
 
 
@@ -22,7 +22,7 @@ function ItemListContainer(props) {
 
             else{
               const categoryFound = productos.filter(producto =>{
-                return producto.category == categoryId;
+                return producto.category === categoryId;
               })
               resolve(categoryFound)
             }
