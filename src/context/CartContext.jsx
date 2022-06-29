@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 
@@ -8,30 +9,36 @@ function CartProvider ({children}) {
 
   const [cart,setCart] = useState([])
 
-  function prueba(params) {
-    console.log("Hola");
-  }
+  useEffect(()=>{
+    console.log(cart);
+  },[cart]);
 
 
+  function addItem(item, cantidad) {
+    // addItem(item,cantidad);
+    if (isInCart(item.id)) {
+      console.log('ya esta en el carrito');
+    }else{
+      setCart([...cart,{...item,cantidad}])
+    }
 
-  function addItem(item, quantity) {
-    
   }
   
-  function removeItem(itemId) {
-    
+  function removeItem(id) {
+    const products =cart.filter(prod =>prod.id !== id)
+    setCart(products)
   }
   
   function clear() {
-    
+    setCart([])
   }
   
-  //  function isInCart (id) => true|false{
-    
-  //  }
+  function isInCart(id) {
+    return cart.some((prod)=>prod.id ===id);
+  };
 
   return (
-    <CartContext.Provider value={{cart,prueba}}>
+    <CartContext.Provider value={{cart,addItem,removeItem,clear}}>
       {children}
     </CartContext.Provider>
   )

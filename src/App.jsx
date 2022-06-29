@@ -1,7 +1,7 @@
 import './App.css';
 import LogoImg  from '../src/imgsrc/mmlogo.png';
-import LogoImgWhatsapp from '../src/imgsrc/instagram.svg';
-import LogoImgInstagram from '../src/imgsrc/whatsapp.svg';
+import LogoImgWhatsapp from '../src/imgsrc/whatsapp.svg';
+import LogoImgInstagram from '../src/imgsrc/instagram.svg';
 import NavBar from './components/navBar/NavBar';
 import ItemListContainer from './pages/itemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './pages/itemDetailContainer/ItemDetailContainer.jsx';
