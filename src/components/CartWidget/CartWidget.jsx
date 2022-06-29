@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom'
 function CartWidget() {
 
   return (
-    <li className="nav-item"><NavLink to="/Carrito" className="nav-link active" href="#"><img src={Carrito} alt="carrito" className="imgcarrito"/></NavLink></li>
+    <li className="nav-item"><NavLink to="/Cart" className="nav-link active" href="#"><img src={Carrito} alt="carrito" className="imgcarrito"/></NavLink></li>
   )
 }
 

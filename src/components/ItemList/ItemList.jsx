@@ -4,7 +4,7 @@ import './itemlist.css'
 
 function ItemList({items}) {
   return (
-    <div>
+    <div className='Divlist'>
         {items.map((item)=>(
             <Item key={item.id} item={item}/>
         ))}

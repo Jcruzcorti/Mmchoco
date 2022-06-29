@@ -38,3 +38,50 @@
     font-weight: bolder;
     font-size: 20px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .divgreeting{
+        text-align: center;  
+    }
+    
+    
+    .h2greeting{    
+        color: #000000;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    
+    .imgitem{
+        width: 220px;
+        height: 260px;
+    }
+    
+    .divInfo{
+        padding: 6px;
+        color: #000000;
+        border: 2px solid #000000 ;
+        text-align: center;
+        background-color: #f3dbed;
+        border-radius: 6px;
+        width: 280px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .pItemDescripcion{
+        font-size: 16px;
+    }
+    
+    .pItemPrecio{
+        font-weight: bolder;
+        font-size: 16px;
+    }
+    
+
+}

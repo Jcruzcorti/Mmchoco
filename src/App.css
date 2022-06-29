@@ -23,18 +23,23 @@
 }
 
 
-
-.footer {
+.App-footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
 
 
 .divfooter0 {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row; }
+    flex-direction: row; 
+    
+  }
 .footer__img {
     width: 75px;
     height: 60px; 
@@ -42,6 +47,8 @@
 .footer__p {
     font-size: 23px;
     color: #000000;
+    margin:auto;
+    
   }
 .divfooter__img2 {
     width: 65px;
@@ -52,3 +59,91 @@
     width: 90px;
     height: 60px; 
   }
+
+
+  #grilla {
+    display: grid;
+    grid-template-areas: "App-header App-header App-header"
+   "App-section App-section App-section "
+   "App-footer App-footer App-footer"; }
+    #grilla .App-header {
+      grid-area: App-header; }
+    #grilla .App-section {
+      grid-area: App-section; }
+    #grilla .App-footer {
+      grid-area: App-footer; }
+
+
+
+@media screen and (max-width: 768px) {
+  
+  .App {
+    text-align: center;
+    background-color: #f3dbed;
+  }
+  
+  .App-logo {
+    width: 130px;
+    height: 100px;
+  }
+  
+  
+  .App-header {
+    background-color: #f3dbed;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;  
+  }
+  
+  
+  .App-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between; 
+    /* align-items: center; 
+    margin-top: 100px;
+    margin-bottom: 10px; */
+  }
+  
+  
+  .divfooter0 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; 
+      
+    }
+  .footer__img {
+      width: 75px;
+      height: 60px; 
+      /* display: none; */
+    }
+  .footer__p {
+      font-size: 14px;
+      color: #000000;
+      margin:auto;
+      
+    }
+  .divfooter__img2 {
+      width: 65px;
+      height: 45px;
+      transition: all 1s; 
+    }
+  .divfooter__img2:hover {
+      width: 90px;
+      height: 60px; 
+      /* display: none; */
+    }
+  
+
+/* --------- */
+  #grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; } 
+
+}
+
+

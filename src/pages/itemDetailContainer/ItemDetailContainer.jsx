@@ -1,8 +1,9 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect} from 'react';
 // import ItemCount from '../ItemCount/ItemCount'
-import { productos } from '../../mock/products'
+import { productos } from '../../mock/products';
 import ItemDetail from '../../components/itemDetail/ItemDetail';
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom';
+import './itemdetailcontainer.css';
 
 
 function ItemDetailContainer (props) {
@@ -41,7 +42,6 @@ function ItemDetailContainer (props) {
     const Saludo ={
 
         fontFamily: props.fontFamily,
-        fontSize: props.fontSize,
         textAlign: props.textAlign,
         color: props.color        
 
@@ -52,7 +52,7 @@ function ItemDetailContainer (props) {
 
     <div className="divgreeting">
         
-       <h1 style={Saludo}> {props.greeting} </h1>
+       <h1 style={Saludo}  className="h1detail" > {props.greeting} </h1>
        <ItemDetail item={product}/>
        {/* <ItemCount stock={5} initial={1}/> */}
         

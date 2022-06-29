@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from 'react'
-import './itemlistcontainer.css'
-import { productos } from '../../mock/products'
-import ItemList from '../../components/itemList/ItemList'
-import { useParams } from 'react-router-dom'
+import React, {useState,useEffect} from 'react';
+import './itemlistcontainer.css';
+import { productos } from '../../mock/products';
+import ItemList from '../../components/itemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 
 function ItemListContainer(props) {
@@ -43,7 +43,6 @@ function ItemListContainer(props) {
     const Saludo ={
 
         fontFamily: props.fontFamily,
-        fontSize: props.fontSize,
         textAlign: props.textAlign,
         color: props.color        
 
@@ -54,7 +53,7 @@ function ItemListContainer(props) {
 
     <div className="divgreeting1">
         
-       <h1 style={Saludo}> {props.greeting} </h1>
+       <h1 style={Saludo} className="h1greeting"> {props.greeting} </h1>
 
        <div className='divListContainer'>
           <ItemList items={products}/>
