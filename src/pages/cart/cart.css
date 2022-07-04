@@ -5,6 +5,11 @@
     align-content: flex-start;
 }
 
+.DivCart2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .h1cart{    
     color: #000000;
@@ -31,8 +36,36 @@
     border-radius: 5px;
     width: 180px;
     height: 50px;
+    margin-right: 4px;
 }
 
+
+.Botonclickback{
+    background-color: #f3dbed;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 180px;
+    height: 50px; 
+}
+
+.Botonclickfin{
+    background-color: #f3dbed;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 180px;
+    height: 50px; 
+    margin-left: 4px;
+}
+
+.total{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
 
 @media screen and (max-width:768px) {
 
@@ -54,10 +87,15 @@
     .DivCart{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-content: center;
     }
     
+    .DivCart2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     
     .h1cart{    
         color: #000000;
@@ -87,5 +125,30 @@
         /* margin-left: auto;
         margin-right: auto; */
     
+    }
+
+    .Botonclickback{
+        background-color: #f3dbed;
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        width: 120px;
+        height: auto;
+    }
+    
+    .Botonclickfin{
+        background-color: #f3dbed;
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        width: 120px;
+        height: auto;
+    }
+
+    .total{
+        font-size: 18px;
+        font-weight: bold;
     }
 }

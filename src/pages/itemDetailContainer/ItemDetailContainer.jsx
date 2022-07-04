@@ -9,6 +9,7 @@ import './itemdetailcontainer.css';
 function ItemDetailContainer (props) {
 
   const [product, setProduct] = useState({})
+  const [isLoading,setIsLoeading] = useState(true)
 
   const {itemId} = useParams();
   // console.log(itemId);
@@ -31,6 +32,7 @@ function ItemDetailContainer (props) {
       traerProducto
         .then( (respuesta)=> {
           setProduct(respuesta);
+          setIsLoeading(false);
         })
      
         .catch((error) => {
@@ -53,7 +55,13 @@ function ItemDetailContainer (props) {
     <div className="divgreeting">
         
        <h1 style={Saludo}  className="h1detail" > {props.greeting} </h1>
-       <ItemDetail item={product}/>
+        {
+          isLoading
+          ? <h3>Cargando...</h3>
+          : <ItemDetail item={product}/>
+        }
+       
+
        {/* <ItemCount stock={5} initial={1}/> */}
         
     </div>

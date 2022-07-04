@@ -1,7 +1,7 @@
 
 .Divboton{
    background-color: #f3dbed;
-   border-radius: 10px;
+   /* border-radius: 10px; */
    width: 150px;
    margin-left: auto;
    margin-right: auto;
@@ -10,7 +10,9 @@
 .Botoncarrito{
     background-color: #f3dbed;
     color: #000000;
-    border-radius: 5px;
+    font-size: 25px;
+    border:none ;
+    
 }
 
 
@@ -18,6 +20,7 @@
     background-color: #f3dbed;
     color: #000000;
     border-radius: 5px;
+    font-weight:bold;
 }
 
 

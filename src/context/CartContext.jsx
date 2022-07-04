@@ -37,8 +37,21 @@ function CartProvider ({children}) {
     return cart.some((prod)=>prod.id ===id);
   };
 
+
+  function getTotalItems() {
+    let total = 0;
+    cart.forEach(item=> total = total + item.cantidad);
+    return total;
+  }
+
+  function totalPrice() {
+    let total = 0;
+    cart.forEach(item=> total = total + (item.cantidad*item.price));
+    return total;
+  }
+
   return (
-    <CartContext.Provider value={{cart,addItem,removeItem,clear}}>
+    <CartContext.Provider value={{cart,addItem,removeItem,clear,getTotalItems,totalPrice}}>
       {children}
     </CartContext.Provider>
   )

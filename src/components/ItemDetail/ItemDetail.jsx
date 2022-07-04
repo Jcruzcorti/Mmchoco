@@ -39,10 +39,10 @@ function ItemDetail({item}) {
             {
               addCart===0
               ? <ItemCount onAdd={handleOnAdd} stock={5} initial={1}/>
-              :<Link to='/cart'>Ir al carrito</Link>
+              :<Link to='/cart'><button className='IrCarrito'>Ir al carrito</button></Link>
             }
              
-             
+             <Link to='/'> <button className='IrCatalogo' >Ir al catálogo</button> </Link>
         </div>
 
     </div>
