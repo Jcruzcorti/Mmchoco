@@ -1,35 +1,24 @@
 import React, {useState,useEffect} from 'react';
 import './itemlistcontainer.css';
-import { productos } from '../../mock/products';
 import ItemList from '../../components/itemList/ItemList';
 import { useParams } from 'react-router-dom';
+import {getItem, getItem3} from '../../service/Firestore'
 
 
 function ItemListContainer(props) {
 
+  getItem().then(respu=>(console.log(respu)));
+
+
   const [products, setProducts] = useState([])
 
   const {categoryId} = useParams();
-  // console.log(categoryId);
 
   useEffect( ()=> {
 
-    const traerProductos =  new Promise((resolve, reject) => {
-        setTimeout(() => {
+      if (categoryId) {
+        getItem3(categoryId)
 
-          if (categoryId === undefined)
-            resolve(productos)
-
-            else{
-              const categoryFound = productos.filter(producto =>{
-                return producto.category === categoryId;
-              })
-              resolve(categoryFound)
-            }
-        }, 800);
-    });
-
-      traerProductos
         .then( (respuesta)=> {
           setProducts(respuesta);
         })
@@ -37,6 +26,19 @@ function ItemListContainer(props) {
         .catch((error) => {
           console.log(error);
         });
+      } 
+
+      else{
+        getItem()
+        .then( (respuesta)=> {
+          setProducts(respuesta);
+        })
+     
+        .catch((error) => {
+          console.log(error);
+        });
+      }
+     
   }, [categoryId]);
 
 

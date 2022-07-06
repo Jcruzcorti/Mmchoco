@@ -1,35 +1,23 @@
 import React, {useState,useEffect} from 'react';
-// import ItemCount from '../ItemCount/ItemCount'
-import { productos } from '../../mock/products';
 import ItemDetail from '../../components/itemDetail/ItemDetail';
 import {useParams} from 'react-router-dom';
 import './itemdetailcontainer.css';
+import {getItem2} from '../../service/Firestore'
 
 
 function ItemDetailContainer (props) {
+
 
   const [product, setProduct] = useState({})
   const [isLoading,setIsLoeading] = useState(true)
 
   const {itemId} = useParams();
-  // console.log(itemId);
+
 
 
   useEffect( ()=> {
 
-    const traerProducto =  new Promise((resolve, reject) => {
-        setTimeout(() => {
-    
-        const itemFound = productos.find(producto =>{
-           return producto.id === parseInt(itemId)
-        })
-        
-        resolve(itemFound)
-
-        }, 800);
-    });
-
-      traerProducto
+    getItem2(itemId)
         .then( (respuesta)=> {
           setProduct(respuesta);
           setIsLoeading(false);
@@ -60,9 +48,6 @@ function ItemDetailContainer (props) {
           ? <h3>Cargando...</h3>
           : <ItemDetail item={product}/>
         }
-       
-
-       {/* <ItemCount stock={5} initial={1}/> */}
         
     </div>
   )
