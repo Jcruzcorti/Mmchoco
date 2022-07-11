@@ -45,6 +45,7 @@ function ItemDetail({item}) {
              <Link to='/'> <button className='IrCatalogo' >Ir al catálogo</button> </Link>
         </div>
 
+
     </div>
   )
 }

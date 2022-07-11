@@ -48,7 +48,7 @@ function ItemDetailContainer (props) {
           ? <h3>Cargando...</h3>
           : <ItemDetail item={product}/>
         }
-        
+  
     </div>
   )
 }

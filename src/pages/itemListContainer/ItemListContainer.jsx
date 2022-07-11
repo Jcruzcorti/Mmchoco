@@ -7,7 +7,7 @@ import {getItem, getItem3} from '../../service/Firestore'
 
 function ItemListContainer(props) {
 
-  getItem().then(respu=>(console.log(respu)));
+  // getItem().then(respu=>(console.log(respu)));
 
 
   const [products, setProducts] = useState([])

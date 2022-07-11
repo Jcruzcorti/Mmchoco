@@ -1,5 +1,6 @@
 #Body{
   background-color: #f3dbed;
+  box-sizing: content-box;
 }
 
 .App {
