@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore,getDocs,collection, getDoc, doc,query,where,setDoc, addDoc,Timestamp} from "firebase/firestore"
+import {getFirestore,getDocs,collection, getDoc, doc,query,where,setDoc, addDoc,Timestamp,orderBy,limit} from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBjaB1op6oXeUlymsK2h4COAqAJIF4XRMU",
@@ -21,23 +21,26 @@ export function testDatabase() {
 export async function getItem() {
 
     const itemCollection = collection(appFirestore,"chocolates");
-    const itemSnapshot = await getDocs(itemCollection);
+    const qOrder = query(itemCollection, orderBy("order"), limit(6));
+    const itemSnapshot = await getDocs(qOrder);
 
     let respu = itemSnapshot.docs.map(doc=>{
         return {
             ...doc.data(),
             id:doc.id
+
         }
     })
-
+    
     return respu;
 
 }
- 
+
 export async function getItem2(itemId){
     const itemCollection = collection(appFirestore,"chocolates");
-
-    const docref = doc(itemCollection,itemId)
+    
+    const docref = doc(itemCollection,itemId);
+   
     const docSnapshot = await getDoc(docref);
     
     return {
@@ -49,11 +52,15 @@ export async function getItem2(itemId){
 
 export async function getItem3(categoryId) {
     const itemCollection = collection(appFirestore,"chocolates");
-    const q = query(itemCollection,where("category", "==", categoryId))
-    const itemSnapshot = await getDocs(q);
+
+    const q = query(itemCollection,where("category", "==", categoryId));
+    // const q2 = query(itemCollection,orderBy("order","asc"),limit(3));
+    // const q3 = query(itemCollection,where("order", ">", 3),orderBy("price","asc"),limit(3));
+
+    const itemSnapshot3 = await getDocs(q);
     
 
-    let respu = itemSnapshot.docs.map(doc=>{
+    let respu = itemSnapshot3.docs.map(doc=>{
         return {
             ...doc.data(),
             id:doc.id
@@ -63,12 +70,46 @@ export async function getItem3(categoryId) {
     return respu;
 }
 
+// export async function getItem4() {
+//     const itemCollection = collection(appFirestore,"chocolates");
+//     const q2 = query(itemCollection,where("order", "<=", 3),orderBy("price","asc"),limit(3));
+//     const q3 = query(itemCollection,where("order", ">", 3),orderBy("price","asc"),limit(3));
+//     const itemSnapshot2 = await getDocs(q2,q3);
+//     // const itemSnapshot3 = await getDocs(q3);
+
+//     let respu = itemSnapshot2.docs.map(doc=>{
+//         return {
+//             ...doc.data(),
+//             id:doc.id,
+//         }
+//     })
+
+//     return respu;
+
+// }
+
+// export async function getItem5() {
+//     const itemCollection = collection(appFirestore,"chocolates");
+//     const q3 = query(itemCollection,where("order", ">", 3),orderBy("order"),limit(3));
+//     const itemSnapshot3 = await getDocs(q3);
+    
+
+//     let respu = itemSnapshot3.docs.map(doc=>{
+//         return {
+//             ...doc.data(),
+//             id:doc.id,
+//         }
+//     })
+
+//     return respu;
+// }
 
 export async function exportData() {
     const productos = [
 
         {
             id: 1,
+            order:1,
             name:'Caja de bombones chica',
             price: 700,
             stock: 5,
@@ -80,6 +121,7 @@ export async function exportData() {
     
         {
             id: 2,
+            order:2,
             name:'Caja de bombones mediana',
             price: 1400,
             stock: 5,
@@ -91,6 +133,7 @@ export async function exportData() {
     
         {
             id: 3,
+            order:3,
             name:'Caja de bombones grande',
             price: 2800,
             stock: 5,
@@ -102,6 +145,7 @@ export async function exportData() {
     
         {
             id: 4,
+            order:4,
             name:'Caja de bombones y barritas chica',
             price: 700,
             stock: 5,
@@ -114,6 +158,7 @@ export async function exportData() {
     
         {
             id: 5,
+            order:5,
             name:'Caja de bombones y barritas mediana',
             price: 1400,
             stock: 5,
@@ -126,6 +171,7 @@ export async function exportData() {
     
         {
             id: 6,
+            order:6,
             name:'Caja de bombones y barritas grande',
             price: 2800,
             stock: 5,
@@ -168,4 +214,8 @@ export async function buyOrder(dataOrden) {
 
     return orderCreated;
 }
+
+
+
+
 export default appFirestore;

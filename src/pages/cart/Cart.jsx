@@ -3,43 +3,17 @@ import './cart.css'
 import {useContext} from 'react'
 import { CartContext } from '../../context/CartContext';
 import {Link} from 'react-router-dom'
-import {buyOrder} from '../../service/Firestore'
-import Swal from 'sweetalert2'
+// import {buyOrder} from '../../service/Firestore'
+// import Swal from 'sweetalert2'
+import CartForm from './CartForm'
 
 function Cart() {
+
   const {cart,clear,removeItem,totalPrice} = useContext(CartContext)
    
 
-  function handleFin() {
-    
-    const dataOrden = {
-      buyer:{
-        name: "Juan Cortiñas",
-        phone: 1234567,
-        email: "asdasd@hotmail.com"
-      },
-      items: cart,
-      total: totalPrice(),
-    
-    }
-    
-    
-    buyOrder(dataOrden).then((orderCreated)=>{
-      clear();
-      console.log(orderCreated.id);
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Pedido realizado, muchas gracias.',
-        showConfirmButton: false,
-        timer: 2500
-      })
-    });
-    
 
-  }
-
-  ;
+  
   return (
     <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
 
@@ -67,14 +41,13 @@ function Cart() {
         {
           cart.length === 0
           ? <Link to='/'> <button className='Botonclickback'> Seguir comprando</button> </Link>          
-          :<button onClick={clear} className='Botonclickvacio'>Vaciar Carrito</button>
+          : <CartForm cart={cart} totalPrice={totalPrice} clear={clear}/>
+        
         }
         
-        <button onClick={handleFin} className='Botonclickfin'> Finalizar compra</button>
         
       </div>
-      <p className='total'>Total: $ {totalPrice()}</p>
-     
+
     </div>
   )
 }

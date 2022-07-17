@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import './itemlistcontainer.css';
 import ItemList from '../../components/itemList/ItemList';
 import { useParams } from 'react-router-dom';
-import {getItem, getItem3} from '../../service/Firestore'
+import {getItem, getItem3,getItem4} from '../../service/Firestore'
 
 
 function ItemListContainer(props) {
@@ -14,13 +14,16 @@ function ItemListContainer(props) {
 
   const {categoryId} = useParams();
 
-  useEffect( ()=> {
 
+  useEffect( ()=> {
+    
       if (categoryId) {
         getItem3(categoryId)
-
+        
+      
         .then( (respuesta)=> {
           setProducts(respuesta);
+          // getItem4()
         })
      
         .catch((error) => {
