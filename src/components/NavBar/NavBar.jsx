@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 import Bootrsap from 'bootstrap'
 
 
-function NavBar() {
+export function NavBar() {
 
 
   return (

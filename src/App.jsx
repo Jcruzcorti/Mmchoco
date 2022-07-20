@@ -2,13 +2,14 @@ import './App.css';
 import LogoImg  from '../src/imgsrc/mmlogo.png';
 import LogoImgWhatsapp from '../src/imgsrc/whatsapp.svg';
 import LogoImgInstagram from '../src/imgsrc/instagram.svg';
-import NavBar from './components/navBar/NavBar';
+// import NavBar from './components/navBar/NavBar';
 import ItemListContainer from './pages/itemListContainer/ItemListContainer';
 import ItemDetailContainer from './pages/itemDetailContainer/ItemDetailContainer';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import Cart from './pages/cart/Cart';
 import CartProvider from './context/CartContext';
+import {NavBar} from './components/navBar/NavBar'
 
 
 
@@ -23,7 +24,7 @@ function App() {
             <header className="App-header">
       
               <NavLink to="/">  <img src={LogoImg} className="App-logo" alt="logo" />   </NavLink>             
-              <NavBar/>   
+              <NavBar/>
               
             </header>
 
