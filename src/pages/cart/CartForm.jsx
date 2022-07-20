@@ -21,31 +21,60 @@ function CartForm({cart,totalPrice,clear}) {
         setBuyer({
             ...buyer,
             [field]:value,
+    
         })
+        
     } 
+
 
     function handleFin(e) {
         e.preventDefault();
+ 
         const dataOrden = {
           buyer,
           items: cart,
           total: totalPrice(),
         
+
+
         }
-        
-        
-        buyOrder(dataOrden).then((orderCreated)=>{
-          clear();
-          console.log(orderCreated.id);
+        if (buyer.name=== "") {
           Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Pedido realizado, muchas gracias.',
-            showConfirmButton: false,
-            timer: 2500
-          })
-        });
-    
+                icon: 'error',
+                title: 'Error',
+                text: 'Para finalizar la compra, debes ingresar tus datos en el formulario por favor.',
+              })
+        }
+        else if (buyer.phone=== "") {
+          Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Para finalizar la compra, debes ingresar tus datos en el formulario por favor.',
+              })
+        }
+        else if (buyer.email=== "") {
+          Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Para finalizar la compra, debes ingresar tus datos en el formulario por favor.',
+              })
+        }
+            
+        else{
+          buyOrder(dataOrden).then((orderCreated)=>{
+          
+            clear();
+            console.log(orderCreated.id);
+               Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Pedido realizado, muchas gracias.',
+                showConfirmButton: false,
+                timer: 2500
+                })
+            });
+          } 
+   
     }
 
 
@@ -59,21 +88,21 @@ function CartForm({cart,totalPrice,clear}) {
             <div className='divInput'>
 
                 <label htmlFor="name">Nombre y apellido: </label>
-                <input onChange={handleChange} type="text" name='name' placeholder="ingrese su nombre y apellido" required />
+                <input onChange={handleChange} type="text" name='name' placeholder="ingrese su nombre y apellido" aria-required />
 
                 <label htmlFor="phone">Teléfono: </label>
-                <input onChange={handleChange} type="number" name='phone' placeholder="ingrese su teléfono" required/>
+                <input onChange={handleChange} type="number" name='phone' placeholder="ingrese su teléfono" aria-required/>
 
                 <label htmlFor="email">E-mail: </label>
-                <input onChange={handleChange} type="email" name='email' placeholder="ingrese su E-mail" required/>
+                <input onChange={handleChange} type="email" name='email' placeholder="ingrese su E-mail" aria-required/>
 
             </div>
     
             <div className='divButtons'>
                 <p className='total'>Total: $ {totalPrice()}</p>
-                <button onClick={clear} className='Botonclickvacio'>Vaciar Carrito</button>
-                <button onClick={handleFin} className='Botonclickfin'> Finalizar compra</button> 
-                
+          
+                <button onClick={clear} className='Botonclickvacio' >Vaciar Carrito</button>
+                <button onClick={handleFin} className='Botonclickfin'> Finalizar compra</button>                 
             </div>
             </fieldset>
         </form>

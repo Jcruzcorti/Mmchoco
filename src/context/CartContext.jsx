@@ -15,7 +15,6 @@ function CartProvider ({children}) {
 
 
   function addItem(item, cantidad) {
-    // addItem(item,cantidad);
     if (isInCart(item.id)) {
       console.log('ya esta en el carrito');
     }else{

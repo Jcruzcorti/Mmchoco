@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from '../item/Item';
-import './itemlist.css'
 
 function ItemList({items}) {
   return (

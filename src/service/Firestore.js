@@ -54,11 +54,8 @@ export async function getItem3(categoryId) {
     const itemCollection = collection(appFirestore,"chocolates");
 
     const q = query(itemCollection,where("category", "==", categoryId));
-    // const q2 = query(itemCollection,orderBy("order","asc"),limit(3));
-    // const q3 = query(itemCollection,where("order", ">", 3),orderBy("price","asc"),limit(3));
 
-    const itemSnapshot3 = await getDocs(q);
-    
+    const itemSnapshot3 = await getDocs(q);   
 
     let respu = itemSnapshot3.docs.map(doc=>{
         return {
@@ -70,39 +67,6 @@ export async function getItem3(categoryId) {
     return respu;
 }
 
-// export async function getItem4() {
-//     const itemCollection = collection(appFirestore,"chocolates");
-//     const q2 = query(itemCollection,where("order", "<=", 3),orderBy("price","asc"),limit(3));
-//     const q3 = query(itemCollection,where("order", ">", 3),orderBy("price","asc"),limit(3));
-//     const itemSnapshot2 = await getDocs(q2,q3);
-//     // const itemSnapshot3 = await getDocs(q3);
-
-//     let respu = itemSnapshot2.docs.map(doc=>{
-//         return {
-//             ...doc.data(),
-//             id:doc.id,
-//         }
-//     })
-
-//     return respu;
-
-// }
-
-// export async function getItem5() {
-//     const itemCollection = collection(appFirestore,"chocolates");
-//     const q3 = query(itemCollection,where("order", ">", 3),orderBy("order"),limit(3));
-//     const itemSnapshot3 = await getDocs(q3);
-    
-
-//     let respu = itemSnapshot3.docs.map(doc=>{
-//         return {
-//             ...doc.data(),
-//             id:doc.id,
-//         }
-//     })
-
-//     return respu;
-// }
 
 export async function exportData() {
     const productos = [

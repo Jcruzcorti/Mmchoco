@@ -2,13 +2,10 @@ import React, {useState,useEffect} from 'react';
 import './itemlistcontainer.css';
 import ItemList from '../../components/itemList/ItemList';
 import { useParams } from 'react-router-dom';
-import {getItem, getItem3,getItem4} from '../../service/Firestore'
+import {getItem, getItem3} from '../../service/Firestore'
 
 
 function ItemListContainer(props) {
-
-  // getItem().then(respu=>(console.log(respu)));
-
 
   const [products, setProducts] = useState([])
 
@@ -23,7 +20,6 @@ function ItemListContainer(props) {
       
         .then( (respuesta)=> {
           setProducts(respuesta);
-          // getItem4()
         })
      
         .catch((error) => {

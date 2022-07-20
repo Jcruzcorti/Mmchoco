@@ -71,7 +71,6 @@ label{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        /* justify-content: space-around; */
         padding: 15px;
     }
 
@@ -86,8 +85,6 @@ label{
     .divInput{
         display: flex;
         flex-direction:column;
-        /* justify-content: space-around; */
-        /* padding-bottom: 20px; */
     }
     
     input{
@@ -130,7 +127,6 @@ label{
     .total{
         font-size: 20px;
         font-weight: bold;
-        /* margin-top: 10px; */
     }
 
 }

@@ -5,24 +5,17 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-// import {useNavigate} from 'react-router-dom';
+
 
 function ItemDetail({item}) {
-
-  // let navigate=useNavigate()
 
   const {addItem} =useContext(CartContext)
 
   const [addCart,setAddCart] = useState(0)
 
-
-
   function handleOnAdd(cantidad) { 
     setAddCart(cantidad);
     addItem(item,cantidad);
-    // console.log({...item,cantidad});
-  
-    // navigate('/cart');
   }
   
   return (

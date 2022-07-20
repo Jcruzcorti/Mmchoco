@@ -48,11 +48,9 @@ function App() {
               </div> 
 
               <div className="divfooter">  
-                  {/* <a href="https://jcruzcorti.github.io/MMchocolates/contacto.html"> */}
-                      <img  src={LogoImgWhatsapp} className="divfooter__img2" alt="mmchocolates-whatsapp" />
-                  {/* </a>  */}
+                    <img  src={LogoImgWhatsapp} className="divfooter__img2" alt="mmchocolates-whatsapp" />
                   <a href="https://www.instagram.com/mm.chocolates/?hl=es-la">
-                      <img src={LogoImgInstagram} className="divfooter__img2"  alt="mmchocolates-instagram"/>
+                    <img src={LogoImgInstagram} className="divfooter__img2"  alt="mmchocolates-instagram"/>
                   </a>   
               </div> 
             </footer>

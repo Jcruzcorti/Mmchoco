@@ -3,8 +3,6 @@ import './cart.css'
 import {useContext} from 'react'
 import { CartContext } from '../../context/CartContext';
 import {Link} from 'react-router-dom'
-// import {buyOrder} from '../../service/Firestore'
-// import Swal from 'sweetalert2'
 import CartForm from './CartForm'
 
 function Cart() {

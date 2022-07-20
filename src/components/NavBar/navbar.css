@@ -1,6 +1,6 @@
 .Divnav{
     display: flex;
-    flex-wrap: wrap;
+   
     flex-direction: row;
     margin-bottom: 100px;
     font-size: 22px;
@@ -9,9 +9,11 @@
 @media screen and (max-width: 768px) {
     .Divnav{
         display: flex;
-        flex-wrap: wrap;
+      
         flex-direction: column;
         margin-bottom: 50px;
         font-size: 14px;
     }
+
+
 }
