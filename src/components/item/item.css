@@ -4,7 +4,6 @@
     align-items: center;
     float:left;
     margin: 30px;
-    margin-left: 50px;    
 }
 
 
@@ -16,7 +15,7 @@
     text-align: center;
     background-color: #f3dbed;
     border-radius: 10px;
-    width: 400px;
+    width: 380px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -73,7 +72,7 @@
     }
     
     .imgitem{
-        width: 160px;
+        width: 140px;
         height: 200px;
     }
     

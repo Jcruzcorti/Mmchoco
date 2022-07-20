@@ -4,7 +4,7 @@ import {getFirestore,getDocs,collection, getDoc, doc,query,where,setDoc, addDoc,
 const firebaseConfig = {
   apiKey: "AIzaSyBjaB1op6oXeUlymsK2h4COAqAJIF4XRMU",
   authDomain: "mm-chocolates.firebaseapp.com",
-  projectId: "mm-chocolates",
+  projectId: process.env.REACT_APP_PROYECT_FB_ID,
   storageBucket: "mm-chocolates.appspot.com",
   messagingSenderId: "490684034133",
   appId: "1:490684034133:web:a739e4f04befffc26378dc"
