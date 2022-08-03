@@ -13,6 +13,7 @@
 .imgitem{
     width: 270px;
     height: 310px;
+    box-shadow: 3px 3px 5px 3px #999;
 }
 
 .divInfo{
